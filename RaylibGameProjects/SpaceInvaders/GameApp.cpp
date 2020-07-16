@@ -297,13 +297,16 @@ void GameApp::Update()
 				{
 					continue;
 				}
+				else if (i < 10 && enemy[i] != nullptr) {
+					enemy[i]->activeShooter = true;
+				}
 				else if (enemy[i - 10] != nullptr)
 				{
 					enemy[i - 10]->activeShooter = true;
 				}
- 				else if (enemy[i - 20] != nullptr)
+				else if (enemy[i - 20] != nullptr)
 				{
- 					enemy[i - 20]->activeShooter = true;
+					enemy[i - 20]->activeShooter = true;
 				}
 				else if (enemy[i - 30] != nullptr)
 				{
